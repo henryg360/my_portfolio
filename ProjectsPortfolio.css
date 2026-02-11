@@ -1,0 +1,40 @@
+:root{--accent:#6a4bd6;--bg:#f7f8fb;--muted:#555}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  padding:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:#111;
+}
+.container{
+  /* updated: visual container card */
+  max-width:1000px;
+  margin:20px auto;
+  padding:24px;
+  background: rgba(255,255,255,0.92);
+  border-radius:12px;
+  box-shadow: 0 10px 30px rgba(10,20,30,0.08);
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+}
+.site-header{background:#fff;border-bottom:1px solid #e6e9ef;position:sticky;top:0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand h1{margin:0;font-size:1.1rem}
+.subtitle{margin:2px 0 0;color:var(--muted);font-size:.85rem}
+.nav-list{list-style:none;display:flex;gap:12px;margin:0;padding:0}
+.nav-list a{text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:6px}
+.nav-list a:hover{background:#f6f2ff;color:var(--accent)}
+main{max-width:1000px;margin:24px auto;padding:0 16px}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,260px));gap:20px;justify-content:center;margin-top:16px;padding:8px;width:100%;max-width:1020px;margin-left:auto;margin-right:auto}
+.project-card{background:#e6f9ea;border:1px solid #c7efd0;color:#064b26;width:100%;aspect-ratio:1/1;padding:16px;border-radius:12px;display:flex;flex-direction:column;box-shadow:0 6px 18px rgba(10,40,20,0.06)}
+.project-card>div{flex:1 1 auto;display:flex;flex-direction:column;gap:6px}
+.project-card h3{margin:0 0 8px;font-size:1.05rem}
+.project-card p{margin:0 0 6px;color:#145d35;font-size:0.95rem}
+.repo-link{margin-top:12px;align-self:center;display:inline-block;background:#0b6b2e;color:#fff;text-decoration:none;padding:10px 14px;border-radius:8px;font-weight:600;font-size:0.95rem;min-width:120px;text-align:center}
+.repo-link:hover{opacity:0.92}
+@media(max-width:640px){.projects-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;padding:8px}.project-card{max-width:420px}}
